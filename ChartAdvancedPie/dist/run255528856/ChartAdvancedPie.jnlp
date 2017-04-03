@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ChartAdvancedPie.jnlp">
+  <information>
+    <title>ChartAdvancedPie</title>
+    <vendor>Oracle</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ChartAdvancedPie.jar" size="3989" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.41-bin.jar" size="992808" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ChartAdvancedPie" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="chartadvancedpie.ChartAdvancedPie"  name="ChartAdvancedPie" />
+  <update check="background"/>
+</jnlp>
