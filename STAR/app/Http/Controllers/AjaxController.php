@@ -10,7 +10,13 @@ class AjaxController extends Controller
 {
     public function index(){
     	$request = 'select * from ligne_bus';
-    	$msg = DB::select($request);
-    	return response()->json(array('request' => $request, 'msg'=> $msg), 200);
+    	$res = DB::select($request);
+    	foreach ($res as $key => $ligne) {
+    		$it = explode(" <> ", $ligne->nom_ligne);
+    		$ligne->start = $it[0];
+    		$ligne->end = $it[count($it) - 1];
+    	}
+    	
+    	return response()->json(array('request' => $request, 'aaData'=> $res), 200);
    }
 }
