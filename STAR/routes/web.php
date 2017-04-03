@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('home');
 });
+
+Route::get('home', function()
+{
+	return view('home');
+});
+
+Route::get('stats', function()
+{
+	return view('stats');
+});
+
+Route::get('getLines','AjaxController@index');
