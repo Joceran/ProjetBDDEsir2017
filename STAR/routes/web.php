@@ -26,3 +26,15 @@ Route::get('stats', function()
 });
 
 Route::get('getLines','AjaxController@index');
+
+Route::get('line/{id}',function($id)
+{
+	return view('line', ['id' => $id]);
+});
+
+Route::get('arrets/{id}','AjaxController@arrets');
+
+Route::get('retards/{id}/{sens}','AjaxController@retards');
+
+Route::get('jours/{id}', 'AjaxController@jours');
+
